@@ -1,10 +1,10 @@
 @isset($pageConfigs)
-{!! Helper::updatePageConfig($pageConfigs) !!}
+{!! App\Helpers\Helper::updatePageConfig($pageConfigs) !!}
 @endisset
 
 <!DOCTYPE html>
-{{-- {!! Helper::applClasses() !!} --}}
-@php $configData = Helper::applClasses(); @endphp
+{{-- {!! App\Helpers\Helper::applClasses() !!} --}}
+@php $configData = App\Helpers\Helper::applClasses(); @endphp
 
 <html lang="@if(session()->has('locale')){{session()->get('locale')}}@else{{ $configData['defaultLanguage'] }}@endif" data-textdirection="{{ env('MIX_CONTENT_DIRECTION') === 'rtl' ? 'rtl' : 'ltr' }}" class="{{ ($configData['theme'] === 'light') ? '' : $configData['layoutTheme'] }}">
 <head>

@@ -35,9 +35,9 @@
             </div>
             <div class="col-xl-4 col-md-6 col-12">
               <div class="form-group">
-                <label for="helperText">With Helper Text</label>
+                <label for="helperText">With App\Helpers\Helper Text</label>
                 <input type="text" id="helperText" class="form-control" placeholder="Name" />
-                <p><small class="form-text">Find helper text here for given textbox.</small></p>
+                <p><small class="form-text">Find App\Helpers\Helper text here for given textbox.</small></p>
               </div>
             </div>
             <div class="col-xl-4 col-md-6 col-12">
