@@ -17,6 +17,8 @@ class CreateSimilaritiesTable extends Migration
             $table->unsignedBigInteger('user_id')->primary()->index();
             $table->json('data');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
