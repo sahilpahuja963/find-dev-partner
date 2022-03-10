@@ -133,7 +133,7 @@
               <span class="avatar-status-offline"></span>
             </span>
             <div class="chat-info flex-grow-1">
-              <h5 class="mb-0">{{ $receiver->name }}</h5>
+              <h5 class="mb-0">{{ $receiver->first_name . ' ' . $receiver->last_name }}</h5>
               <p class="card-text text-truncate">
                 Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing
               </p>

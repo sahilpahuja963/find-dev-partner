@@ -92,8 +92,8 @@
           </div>
           <div class="chat-body">
             <div class="chat-content">
-              <p>Hey John, I am looking for the best admin template.</p>
-              <p>Could you please help me to find it out? 🤔</p>
+              <p>Hey John, I am looking for some great UI.</p>
+              <p>Could you please help me? 🤔</p>
             </div>
             <div class="chat-content">
               <p>It should be Bootstrap 4 compatible.</p>
@@ -119,7 +119,7 @@
               <p>Absolutely!</p>
             </div>
             <div class="chat-content">
-              <p>Vuexy admin is the responsive bootstrap 4 admin template.</p>
+              <p>This is a good UI.</p>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
               <p>It's perfect for my next project.</p>
             </div>
             <div class="chat-content">
-              <p>How can I purchase it?</p>
+              <p>How can I learn it?</p>
             </div>
           </div>
         </div>
