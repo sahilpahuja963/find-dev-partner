@@ -66,7 +66,7 @@
 
     <!-- User Chat messages -->
     <div class="user-chats">
-      <div class="chats">
+      <div id="chats" class="chats">
         <div class="chat">
           <div class="chat-avatar">
             <span class="avatar box-shadow-1 cursor-pointer">

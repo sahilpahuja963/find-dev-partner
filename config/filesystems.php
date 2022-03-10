@@ -52,6 +52,12 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+        'attachments' => [
+            'driver' => 'local',
+            'root' => storage_path('storage/app/attachments'),
+            'visibility' => 'private',
+        ],
+
     ],
 
     /*

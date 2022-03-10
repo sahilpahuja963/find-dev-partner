@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,8 +56,9 @@ Route::get('Login', function (){
         'pageConfigs' => $pageConfigs
     ]);
 });
-Route::get('test', function (){
-    $pageConfigs = ['showMenu' => false, 'layoutWidth' => 'boxed'];
-    $breadcrumbs = [['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Layouts"], ['name' => "Layout without menu"]];
-    return view('test', ['pageConfigs' => $pageConfigs, 'breadcrumbs' => $breadcrumbs]);
-});
+Route::get('test', [ChatController::class,'index']);
+//Route::get('test', function (){
+//    $pageConfigs = ['showMenu' => false, 'layoutWidth' => 'boxed'];
+//    $breadcrumbs = [['link' => "/", 'name' => "Home"], ['link' => "javascript:void(0)", 'name' => "Layouts"], ['name' => "Layout without menu"]];
+//    return view('test', ['pageConfigs' => $pageConfigs, 'breadcrumbs' => $breadcrumbs]);
+//});
