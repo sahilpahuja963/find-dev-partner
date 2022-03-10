@@ -17,7 +17,7 @@
         <p class="card-text mb-2">Make Your Development Easier!</p>
         <div class="col-xl-12 col-lg-12">
           <div class="card">
-            <form class="auth-register-form mt-2" method="POST" action="{{ route('register') }}">
+            <form class="auth-register-form mt-2" method="POST" action="{{ route('auth-register') }}">
               @csrf
               <div class="card-body">
               <ul class="nav nav-tabs" role="tablist">
@@ -33,7 +33,7 @@
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="home" aria-labelledby="home-tab" role="tabpanel">
-                  <form class="auth-register-form mt-2" method="POST" action="{{ route('register') }}">
+                  <form class="auth-register-form mt-2" method="POST" action="{{ route('auth-register') }}">
                     @csrf
                     <div class="form-group">
                       <label for="register-username" class="form-label">Username</label>
@@ -115,46 +115,19 @@
 
                 </div>
                 <div class="tab-pane" id="about" aria-labelledby="about-tab" role="tabpanel">
-                  <div class="form-group">
-                    <label for=" form-label">Skill 1</label>
-                    <select class="form-control" id="basicSelect">
-                      <option>IT</option>
-                      <option>Blade Runner</option>
-                      <option>Thor Ragnarok</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="basicSelect">Skill 2</label>
-                    <select class="form-control" id="basicSelect">
-                      <option>IT</option>
-                      <option>Blade Runner</option>
-                      <option>Thor Ragnarok</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="basicSelect">Skill 3</label>
-                    <select class="form-control" id="basicSelect">
-                      <option>IT</option>
-                      <option>Blade Runner</option>
-                      <option>Thor Ragnarok</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="basicSelect">Skill 4</label>
-                    <select class="form-control" id="basicSelect">
-                      <option>IT</option>
-                      <option>Blade Runner</option>
-                      <option>Thor Ragnarok</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="basicSelect">Skill 5</label>
-                    <select class="form-control" id="basicSelect">
-                      <option>IT</option>
-                      <option>Blade Runner</option>
-                      <option>Thor Ragnarok</option>
-                    </select>
-                  </div>
+
+                    @for($i=1; $i<=5; ++$i)
+                        <div class="form-group">
+                            <label for=" form-label">Skill {{$i}}</label>
+                            <select class="form-control" id="basicSelect-{{$i}}">
+
+                                @foreach($skills as $skill)
+                                    <option value="">{{$skill->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    @endfor
+
                   <button type="submit" class="btn btn-primary btn-block" tabindex="5">Submit</button>
                 </div>
               </div>

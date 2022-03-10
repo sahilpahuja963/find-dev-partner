@@ -31,7 +31,7 @@
           <div class="form-group">
             <div class="d-flex justify-content-between">
               <label for="login-password">Password</label>
-              @if (Route::has('password.request'))
+              @if (\Illuminate\Support\Facades\Route::has('password.request'))
               <a href="{{ route('password.request') }}">
                 <small>Forgot Password?</small>
               </a>
